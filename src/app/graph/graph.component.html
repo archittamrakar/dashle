@@ -1,0 +1,25 @@
+<div class="container">
+  
+  <div class="row">
+    
+      <div class="col-sm-6">
+          <p-card  width="40vw" height="40vh">     
+<div *ngIf="first">Revenue Prediction  of 2016 & 2017
+<p-chart type="bar" [data]="data" (onDataSelect)="selectData($event)" width="40vw" height="40vh"></p-chart>
+</div>
+</p-card>
+</div> 
+<div class="col-sm-6">
+  <!-- <div *ngIf="!second">
+   <p-card  width="60vw" height="40vh">
+      <div> For CHARTS</div>
+  </p-card> 
+</div> -->
+<p-card  width="60vw" height="40vh"> 
+<div *ngIf="second">Indivisual DATA
+<p-chart [type]="graph_type" [data]="data1" (onDataSelect)="selectData($event)"  width="37vw" height="40vh"></p-chart>
+</div>
+</p-card>
+</div>
+</div>
+</div>

@@ -1,0 +1,104 @@
+<nav class="navbar navbar-expand-md  navbar-dark" id="navbar1">
+  <!-- <mat-icon style="margin-right:2%;color:white">menu</mat-icon> -->
+  <a class="navbar-brand" href="#">REVENUE PREDICTION</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">EVENTS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">GALLERY</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">PROFILE</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav .ml-1" style="margin-left:60%;">
+      <li class="nav-item">
+        <a class="nav-link active" href="#">Active</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+
+    </ul>
+  </div>
+</nav>
+<div class="container">
+
+  <div class="row">
+
+    <div class="col-sm-6">
+
+      <p-card width="80vw" height="100vh">
+        <div>Revenue Prediction
+          <p-chart [options]="option" type="bar" [data]="data" (onDataSelect)="selectData($event)" width="40vw" height="60vh"></p-chart>
+        </div>
+      </p-card>
+
+    </div>
+
+    <div class="col-sm-6">
+      <!-- <div *ngIf="!second">
+     <p-card  width="60vw" height="40vh">
+        <div> For CHARTS</div>
+    </p-card> 
+  </div> -->
+      <p-card width="80vw" height="140vh">
+        <div class="container">Details of verticals
+
+          <div class="row">
+
+            
+            <p-card>
+                <p-dialog header="Title" [(visible)]="display">
+                    <span>The story begins as Don Vito Corleone, the head of a New York Mafia family, oversees his daughter's wedding. 
+                        His beloved son Michael has just come home from the war, but does not intend to become part of his father's business. 
+                        Through Michael's life the nature of the family business becomes clear. The business of the family is just like the head of the family, 
+                        kind and benevolent to those who give respect,
+                        but given to ruthless violence whenever anything stands against the good of the family.</span>
+                </p-dialog>
+                <button type="text" (click)="showDialog()" pButton icon="pi pi-info-circle" label="Show"></button>
+            </p-card>
+            <p-card>
+                <p-chart [type]="graph_type" [data]="data1" (onDataSelect)="selectData($event)" width="15vw" height="25vh"></p-chart>
+              </p-card>
+            <p-card>
+              <p-chart [type]="graph_type" [data]="data1" (onDataSelect)="selectData($event)" width="15vw" height="25vh"></p-chart>
+            </p-card>
+            <p-card>
+              <p-chart [type]="graph_type" [data]="data1" (onDataSelect)="selectData($event)" width="15vw" height="25vh"></p-chart>
+            </p-card>
+
+
+          </div>
+        </div>
+      </p-card>
+    </div>
+    <div class="col-sm-6" id="accord">
+      <p-card>
+        <div class="panel-group" id="accordion">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                  Click for more information</a>
+              </h4>
+            </div>
+            <div id="collapse1" class="panel-collapse collapse in">
+              <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+              </div>
+            </div>
+          </div>
+        </div>
+      </p-card>
+    </div>
+  </div>
+</div>
